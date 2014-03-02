@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             if (isJumping && IsGrounded())
             {
                 v = jumpSpeed;
-                AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+                //AudioSource.PlayClipAtPoint(jumpSound, transform.position);
             }
             else
                 v = rigidbody2D.velocity.y;
