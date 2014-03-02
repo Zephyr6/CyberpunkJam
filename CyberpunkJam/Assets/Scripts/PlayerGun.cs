@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Gun : MonoBehaviour {
+public class PlayerGun : MonoBehaviour {
 
     public Rigidbody2D bullet;
 
