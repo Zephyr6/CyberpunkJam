@@ -42,7 +42,10 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+
+        // Initialize the Dialoguer
+        Dialoguer.Initialize();
+
 		addDialoguerEvents();
 		
 		_showDialogueBox = false;
@@ -154,7 +157,14 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 	
 	#region Old School RPG Dialogue GUI
 	void OnGUI(){
-		
+
+        if (GUI.Button(new Rect(25, 25 + 30 + 10, 125, 30), "Talk to me"))
+        {
+            Dialoguer.events.ClearAll();
+            addDialoguerEvents();
+            Dialoguer.StartDialogue(DialoguerDialogues.TestName);
+        }
+
 		if(!_showDialogueBox) return;
 		
 		// Set GUI Skin
@@ -162,7 +172,7 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 		GUI.depth = 10;
 		
 		float rectX = (!_usingPositionRect) ? Screen.width*0.5f : _positionRect.x;
-		float rectY = (!_usingPositionRect) ? Screen.height - 200 : _positionRect.y;
+		float rectY = (!_usingPositionRect) ? Screen.height - 100 : _positionRect.y;
 		float rectWidth = (!_usingPositionRect) ? 512 : _positionRect.width;
 		float rectHeight = (!_usingPositionRect) ? 190 : _positionRect.height;
 		
@@ -178,7 +188,7 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 		}else if(_theme == "bad"){
 			drawDialogueBox(dialogueBoxRect, new Color(0.8f,0.2f,0.2f));
 		}else{
-			drawDialogueBox(dialogueBoxRect);
+			drawDialogueBox(dialogueBoxRect, Color.magenta);
 		}
 		
 		// Draw name box
