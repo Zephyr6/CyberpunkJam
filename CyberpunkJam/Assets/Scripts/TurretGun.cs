@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyGun : MonoBehaviour {
+public class TurretGun : MonoBehaviour {
 
-    public Rigidbody2D bullet;
+    public Collider2D bullet;
     public float timeToShoot = 2.0f;
 
     private float timer = 0;
@@ -29,7 +29,8 @@ public class EnemyGun : MonoBehaviour {
 
     void Fire()
     {
-        Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, transform.position, transform.rotation);
+        Collider2D bulletClone = (Collider2D)Instantiate(bullet, transform.position, transform.rotation);
         bulletClone.GetComponent<BulletCollider>().moveSpeed *= transform.localScale.x;
+        bulletClone.GetComponent<BulletCollider>().firedByEnemy = true;
     }
 }

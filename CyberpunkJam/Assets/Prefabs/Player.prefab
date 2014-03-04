@@ -358,8 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSound: {fileID: 0}
-  speed: 250
-  jumpSpeed: 20
+  speed: 200
+  jumpSpeed: 15
   canMove: 1
 --- !u!114 &11400002
 MonoBehaviour:

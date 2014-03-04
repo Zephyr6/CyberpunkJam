@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerGun : MonoBehaviour {
 
-    public Rigidbody2D bullet;
+    public Collider2D bullet;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,23 @@ public class PlayerGun : MonoBehaviour {
 
     void Fire()
     {
-        Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, transform.position, transform.rotation);
-        bulletClone.GetComponent<BulletCollider>().moveSpeed *= transform.localScale.x;
+        int direction = (int)Input.GetAxis("Vertical");
+        Collider2D bulletClone = (Collider2D)Instantiate(bullet, transform.position, transform.rotation);
+        switch (direction)
+        {
+            case 0:
+                if(transform.localScale.x > 0)
+                    bulletClone.GetComponent<BulletCollider>().moveSpeedVector.x = bulletClone.GetComponent<BulletCollider>().moveSpeed;
+                else
+                    bulletClone.GetComponent<BulletCollider>().moveSpeedVector.x = -bulletClone.GetComponent<BulletCollider>().moveSpeed;
+                break;
+            case 1:
+                bulletClone.GetComponent<BulletCollider>().moveSpeedVector.y = bulletClone.GetComponent<BulletCollider>().moveSpeed;
+                break;
+            case -1:
+                bulletClone.GetComponent<BulletCollider>().moveSpeedVector.y = -bulletClone.GetComponent<BulletCollider>().moveSpeed;
+                break;
+        }        
+        bulletClone.GetComponent<BulletCollider>().firedByEnemy = false;
     }
 }

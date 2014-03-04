@@ -14,7 +14,7 @@ GameObject:
   - 61: {fileID: 6100000}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.38914251, y: -.723001838, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 4.38914251, y: -.704281867, z: 0}
+  m_LocalScale: {x: -2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -36,7 +36,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -64,10 +64,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f9d57f5313c2e4093065d2889f983a, type: 3}
+  m_Script: {fileID: 11500000, guid: 08d4d7f9637fd4143954981f6e9dce47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5000000, guid: 56989595d57616347a5247fec7dafb27, type: 2}
+  bullet: {fileID: 6100000, guid: 56989595d57616347a5247fec7dafb27, type: 2}
   timeToShoot: 2
 --- !u!212 &21200000
 SpriteRenderer:
