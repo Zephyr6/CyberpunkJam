@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             animator.SetBool("IsRight", true);
+
+        if(GetComponentInChildren<ShieldControls>() != null)
+            GetComponentInChildren<ShieldControls>().canMove = canMove;
     }
 
     void FixedUpdate()

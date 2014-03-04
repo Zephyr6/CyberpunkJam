@@ -11,6 +11,8 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 	public AudioSource audioTextEnd;
 	public AudioSource audioGood;
 	public AudioSource audioBad;
+
+    public Color defaultColor;
 	
 	private bool _dialogue;
 	private bool _ending;
@@ -53,6 +55,47 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 		//Invoke("startWindowTweenIn", 1);
 		//Invoke("startWindowTweenOut", 5);
 	}
+
+    public void StartDialog(DialoguerDialogues dialog)
+    {
+        if (GetPlayerMove())
+        {
+            Dialoguer.events.ClearAll();
+            addDialoguerEvents();
+            Dialoguer.StartDialogue(dialog);
+
+            // Disable player
+            SetPlayerMove(false);
+        }
+    }
+
+    private bool GetPlayerMove()
+    {
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+        {
+            return p.GetComponent<PlayerMovement>().canMove;
+        }
+        else
+        {
+            Debug.Log("No player object found");
+        }
+
+        return true;
+    }
+
+    private void SetPlayerMove(bool move)
+    {
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+        {
+            p.GetComponent<PlayerMovement>().canMove = move;
+        }
+        else
+        {
+            Debug.Log("No player object found");
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -146,6 +189,9 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 	
 	private void onDialogueWindowCloseHandler(){
 		startWindowTweenOut();
+
+        // Enable player
+        SetPlayerMove(true);
 	}
 	
 	private void onDialoguerMessageEvent(string message, string metadata){
@@ -157,13 +203,6 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 	
 	#region Old School RPG Dialogue GUI
 	void OnGUI(){
-
-        if (GUI.Button(new Rect(25, 25 + 30 + 10, 125, 30), "Talk to me"))
-        {
-            Dialoguer.events.ClearAll();
-            addDialoguerEvents();
-            Dialoguer.StartDialogue(DialoguerDialogues.TestName);
-        }
 
 		if(!_showDialogueBox) return;
 		
@@ -188,7 +227,7 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
 		}else if(_theme == "bad"){
 			drawDialogueBox(dialogueBoxRect, new Color(0.8f,0.2f,0.2f));
 		}else{
-			drawDialogueBox(dialogueBoxRect, Color.magenta);
+			drawDialogueBox(dialogueBoxRect, defaultColor);
 		}
 		
 		// Draw name box
