@@ -26,12 +26,19 @@ public class BatteryManager : MonoBehaviour {
     void FixedUpdate()
     {
         bool canMove = true;
-        if (GetComponentInChildren<ShieldControls>() != false)
-            canMove = GetComponentInChildren<ShieldControls>().canMove;
-
+        ShieldControls shield = GetComponentInChildren<ShieldControls>();
+        if (shield != null)
+            canMove = shield.canMove;
+        
         if (isUsingShield && canMove)
         {
             CurrentBattery--;
+
+            if (CurrentBattery <= 0)
+                CurrentBattery = 0;
         }
+
+        if (shield != null)
+            shield.hasEnergy = CurrentBattery > 0;
     }
 }
