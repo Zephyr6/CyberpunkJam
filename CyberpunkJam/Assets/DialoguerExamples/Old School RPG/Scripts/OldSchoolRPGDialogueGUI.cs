@@ -89,7 +89,8 @@ public class OldSchoolRPGDialogueGUI : MonoBehaviour {
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         if (p != null)
         {
-            p.GetComponent<PlayerMovement>().canMove = move;
+            PlayerMovement pm = p.GetComponent<PlayerMovement>();
+            pm.canMove = move;
         }
         else
         {
