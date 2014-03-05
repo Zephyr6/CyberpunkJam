@@ -68,6 +68,9 @@ public class PlayerMovement : MonoBehaviour
             mov = new Vector2(h, v);
 
             rigidbody2D.velocity = mov;
+
+            if (GetComponentInChildren<BatteryManager>() != null)
+                GetComponentInChildren<BatteryManager>().isUsingShield = Input.GetMouseButton(0);
         }
         else
         {
