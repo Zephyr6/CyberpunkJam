@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BatteryManager : MonoBehaviour {
-
+    //wtf
     public int MaxBattery = 100;
     public bool isUsingShield = false;
     public GameObject text;

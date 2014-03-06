@@ -31,30 +31,7 @@ AnimationClip:
       m_PostInfinity: 2
     path: 
   m_FloatCurves: []
-  m_PPtrCurves:
-  - curve:
-    - time: 0
-      value: {fileID: 21300000, guid: 38b17c28aba53b24a8d1838b97225c36, type: 3}
-    - time: .0833333358
-      value: {fileID: 21300000, guid: a24009ac7b27b5848b611c92d318b4d1, type: 3}
-    - time: .166666672
-      value: {fileID: 21300000, guid: ecf89f86a3ac217439ce57bbf28736ea, type: 3}
-    - time: .25
-      value: {fileID: 21300000, guid: 3bac3bb8c067a4843a4cf6bf8587e520, type: 3}
-    - time: .333333343
-      value: {fileID: 21300000, guid: 94d4ee9774760d84dbe8f8cd2df826b5, type: 3}
-    - time: .416666657
-      value: {fileID: 21300000, guid: 4468670844336124c864ca8ff2e89be0, type: 3}
-    - time: .5
-      value: {fileID: 21300000, guid: 644bcb3be90506943863ad10d7636eee, type: 3}
-    - time: .583333313
-      value: {fileID: 21300000, guid: bee4cb60e9f54204d8417df22d0db7f7, type: 3}
-    - time: .666666687
-      value: {fileID: 21300000, guid: bee4cb60e9f54204d8417df22d0db7f7, type: 3}
-    attribute: m_Sprite
-    path: 
-    classID: 212
-    script: {fileID: 0}
+  m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
