@@ -18,15 +18,15 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: -1, y: 1, z: 1}
+        value: {x: -1, y: 1, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
+        tangentMode: 1134690304
       - time: .0833333358
-        value: {x: -1, y: 1, z: 1}
+        value: {x: -1, y: 1, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
+        tangentMode: 6619245
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: 
@@ -34,9 +34,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 5152e92144fc594409756ddbc71c0c20, type: 3}
-    - time: .0666666701
-      value: {fileID: 21300000, guid: 5152e92144fc594409756ddbc71c0c20, type: 3}
+      value: {fileID: 21300000, guid: 009db67b10960d341b0ca5b9626470b3, type: 3}
+    - time: .0833333358
+      value: {fileID: 21300000, guid: 009db67b10960d341b0ca5b9626470b3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -49,7 +49,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .0833333358
+    m_StopTime: .100000001
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -99,25 +99,6 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.y
-    path: 
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: .0833333358
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalScale.z
     path: 
     classID: 4
     script: {fileID: 0}
