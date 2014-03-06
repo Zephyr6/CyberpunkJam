@@ -67,8 +67,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d4d7f9637fd4143954981f6e9dce47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6100000, guid: 56989595d57616347a5247fec7dafb27, type: 2}
+  bullet: {fileID: 5000000, guid: 56989595d57616347a5247fec7dafb27, type: 2}
   timeToShoot: 2
+  aggroRadius: 10
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
