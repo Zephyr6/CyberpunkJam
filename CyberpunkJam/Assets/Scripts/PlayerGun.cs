@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerGun : MonoBehaviour {
 
-    public Rigidbody2D bullet;
-
+    public Collider2D bullet;
+    public float bulletTimeToLive = 2f;
 	// Use this for initialization
 	void Start () {
 	
@@ -20,8 +20,12 @@ public class PlayerGun : MonoBehaviour {
 
     void Fire()
     {
-        Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, transform.position, transform.rotation);
-        bulletClone.velocity = new Vector2((bulletClone.GetComponent<BulletCollider>().moveSpeed * transform.localScale.x), 0);
+        Collider2D bulletClone = (Collider2D)Instantiate(bullet, transform.position, transform.rotation);
+        if (transform.localScale.x < 0)
+        {
+            bulletClone.GetComponent<BulletCollider>().moveSpeed *= -1;
+        }
+        Destroy(bulletClone, bulletTimeToLive);
         bulletClone.GetComponent<BulletCollider>().firedByEnemy = false;
     }
 }

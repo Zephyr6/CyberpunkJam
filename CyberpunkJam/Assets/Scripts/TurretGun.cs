@@ -3,10 +3,11 @@ using System.Collections;
 
 public class TurretGun : MonoBehaviour {
 
-    public Rigidbody2D bullet;
+    public Collider2D bullet;
     public float timeToShoot = 2.0f;
     public float aggroRadius = 10f;
     private float timer = 0;
+    public float bulletTimeToLive = 2f;
     // Use this for initialization
     void Start()
     {
@@ -43,8 +44,17 @@ public class TurretGun : MonoBehaviour {
 
     void Fire(Vector2 target)
     {
-        Rigidbody2D bulletClone = (Rigidbody2D)Instantiate(bullet, transform.position, transform.rotation);
-        bulletClone.velocity = (GameObject.Find("Player").transform.position - transform.position).normalized * bulletClone.GetComponent<BulletCollider>().moveSpeed;
+        Collider2D bulletClone = (Collider2D)Instantiate(bullet, transform.position, transform.rotation);
+        Destroy(bulletClone, bulletTimeToLive);
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            if (player.transform.position.x < transform.position.x)
+            {
+                bulletClone.GetComponent<BulletCollider>().moveSpeed *= -1;
+            }
+        }
+        //bulletClone.velocity = (GameObject.Find("Player").transform.position - transform.position).normalized * bulletClone.GetComponent<BulletCollider>().moveSpeed;
         bulletClone.GetComponent<BulletCollider>().firedByEnemy = true;
     }
 }
