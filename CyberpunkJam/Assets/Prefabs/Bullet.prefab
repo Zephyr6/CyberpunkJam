@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
 --- !u!50 &5000000
 Rigidbody2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -59,7 +59,7 @@ BoxCollider2D:
   m_Center: {x: 0, y: 0}
 --- !u!61 &6100002
 BoxCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -79,9 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00c3593a1699fb4da8edabea83e2f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
+  moveSpeed: 1
   damage: 1
-  timeToLive: 2
   firedByEnemy: 0
 --- !u!212 &21200000
 SpriteRenderer:
