@@ -68,7 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6100000, guid: 56989595d57616347a5247fec7dafb27, type: 2}
-  timeToShoot: 2
+  timeToShoot: 1
+  aggroRadius: 10
+  bulletTimeToLive: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
