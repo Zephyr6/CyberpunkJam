@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 9639a75037e3a184ca0d487b37e1213d
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 47
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: tileset_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 151
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_1
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 156
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 156
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 156
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 156
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_5
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 156
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_6
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 156
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 156
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 101
+        width: 94
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_9
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 101
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_10
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 101
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_11
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 124
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_12
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 101
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_13
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 101
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_14
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 124
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 51
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_16
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 51
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_17
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 51
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 11
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 35
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: tileset_20
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 32
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
