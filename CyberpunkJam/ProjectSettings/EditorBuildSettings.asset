@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/Scenes/TrevorTestScene.unity
+    path: Assets/Scenes/TestSceneClint.unity
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
+  - enabled: 1
+    path: Assets/Scenes/TrevorTestScene.unity

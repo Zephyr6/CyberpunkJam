@@ -16,6 +16,6 @@ public class NewGameButton : MonoBehaviour
 
 	void OnMouseUp()
 	{
-		Application.LoadLevel ("TestScene");
+		Application.LoadLevel ("TestSceneClint");
 	}
 }
